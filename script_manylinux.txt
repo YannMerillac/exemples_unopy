@@ -1,0 +1,8 @@
+1  export PATH=/opt/python/cp311-cp311/bin:$PATH
+    2  pip download unopy --no-deps
+    3  pip install --upgrade pip setuptools wheel build
+    4  tar xvf unopy-0.4.16.tar.gz 
+    5  cd unopy-0.4.16
+   19  ./dependencies/scripts/download_dependencies.sh 
+   24  python -m build --wheel
+   25  auditwheel repair dist/unopy-0.4.16-cp311-cp311-linux_x86_64.whl 
